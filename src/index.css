@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Yu Gothic', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +10,77 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p{
+  font-size: 16px;
+}
+
+
+.flex {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.img {
+  border-radius: 15px;
+}
+
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+}
+
+.thumbnails{
+border-radius: 50%;
+}
+
+.center{
+  margin: 0 auto;
+  width: 500px;
+}
+
+em{
+  font-style: normal;
+}
+
+.iframe{
+  position: relative;
+}
+
+.osusume{
+  color: #fff;
+  font-size:18px;
+  font-weight: bold;
+  background: url('./img/osusumebk.svg') no-repeat center center;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  top: 90px;
+  right: 46px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.osusume em{
+  font-size:30px;
+}
+
+.viewcount{
+  margin: 0;
+  text-align: end;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.viewcount em{
+  font-size: 45px;
+}
+@media screen and (min-width:480px) {
+  /*　画面サイズが480pxからはここを読み込む　*/
+  .flex {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

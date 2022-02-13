@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Cat from './components/Cat/index';
+import Dog from './components/Dog/index';
+import Otters from './components/Otters/index'
+import Select from './components/Selecttest/index';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Select />}/>
+      <Route path="/cat" element={<Cat />}/>
+      <Route path="/dog" element={<Dog />}/>
+      <Route path="/otters" element={<Otters />}/>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
