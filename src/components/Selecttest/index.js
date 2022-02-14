@@ -387,24 +387,23 @@ export default class Selecttest extends React.Component {
 
     render() {
         return (
-            <div className="center">
-                <div className="flex">
-                    <Youtube videos={this.state.videosCat} />
-                </div>
+            <div className="selectcenter">
+                <p>再生回数1位のネコの動画はこちら</p>
+                <Youtube videos={this.state.videosCat} />
                 <Link to="/cat">
-                    <button className="btn">ネコの動画を見る</button>
+                    <button className="btn">おすすめのネコの動画を見る</button>
                 </Link>
-                <div className="flex">
-                    <Youtube videos={this.state.videosDog} />
-                </div>
+                <p>再生回数1位のイヌの動画はこちら</p>
+                <Youtube videos={this.state.videosDog} />
                 <Link to="/dog">
-                    <button className="btn">イヌの動画を見る</button>
+                    <button className="btn">おすすめのイヌの動画を見る</button>
                 </Link>
-                <div className="flex">
-                    <Youtube videos={this.state.videosOtters} />
-                </div>
+                <p>再生回数1位のカワウソの動画はこちら</p>
+                <Youtube videos={this.state.videosOtters} />
                 <Link to="/otters">
-                    <button className="btn">カワウソの動画を見る</button>
+                    <button className="btn">
+                        おすすめのカワウソの動画を見る
+                    </button>
                 </Link>
             </div>
         );

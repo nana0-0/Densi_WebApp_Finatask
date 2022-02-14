@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
-export default class Cattest extends React.Component {
+export default class Dogtest extends React.Component {
     constructor(props) {
         super(props);
         // this.state = {
@@ -127,6 +127,7 @@ export default class Cattest extends React.Component {
     }
 
     onSerchYoutube = () => {
+      console.log(this.props.id)
         // const url = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${keyword}&maxResults=3&key=${YOUTUBE_API_KEY}`;
         // const id = this.state.videosCat[0].id.videoId;
         // const url = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`;
@@ -141,7 +142,7 @@ export default class Cattest extends React.Component {
         //       console.log('通信に失敗しました');
         //   });
         // axios
-        //   .get(`https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`)
+        //   .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.props.id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`)
         //   .then(response => {
         //       this.setState({
         //         videosCat_data: response.data.items,
@@ -155,12 +156,18 @@ export default class Cattest extends React.Component {
     render() {
         return (
             <>
-                {this.state.videosCat.map((e, i) =>
-                    <Youtube
-                        videos={e}
-                        key={e.id.videoId}
-                    />
-                )}
+                {this.state.videosCat.map((e, i) => {
+                    return (
+                        <div className="center" key={e.id.videoId}>
+                            <p className="osusume">
+                                おすすめ
+                                <br />
+                                <em>No.{i + 1}</em>
+                            </p>
+                            <Youtube videos={e} key={e.id.videoId}/>
+                        </div>
+                    );
+                })}
             </>
         );
     }

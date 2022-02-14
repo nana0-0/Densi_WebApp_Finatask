@@ -141,7 +141,7 @@ export default class Cattest extends React.Component {
         //       console.log('通信に失敗しました');
         //   });
         // axios
-        //   .get(`https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`)
+        //   .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.props.id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`)
         //   .then(response => {
         //       this.setState({
         //         videosCat_data: response.data.items,

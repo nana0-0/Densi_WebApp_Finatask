@@ -147,18 +147,16 @@ const Youtube = (props) => {
 
     return (
         <div key={url}>
-            <p>{cat_data.items[0].statistics.viewCount}</p>
-            <div style={{ margin: "20px", textAlign: "center" }}>
-                <iframe
-                    title={title}
-                    id="ytplayer"
-                    type="ytplayer"
-                    width="480"
-                    height="270"
-                    src={url}
-                    frameBorder="0"
-                />
-            </div>
+            <iframe
+                title={title}
+                id="ytplayer"
+                type="ytplayer"
+                width="480"
+                height="270"
+                src={url}
+                frameBorder="0"
+            />
+             <p className="viewcount"><em>{cat_data.items[0].statistics.viewCount}</em>回再生</p>
         </div>
     );
 };
