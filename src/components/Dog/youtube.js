@@ -132,17 +132,17 @@ const Youtube = (props) => {
     const test = `https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=YOUR_API_KEY&part=snippet,contentDetails,statistics,status`;
 
     useEffect(() => {
-        // axios
-        //     .get(
-        //         `https://www.googleapis.com/youtube/v3/videos?id=${video.id.videoId}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`
-        //     )
-        //     .then((response) => {
-        //         setCat_data(response.data);
-        //         console.log(response.data);
-        //     })
-        //     .catch(() => {
-        //         console.log("通信に失敗しました");
-        //     });
+        axios
+            .get(
+                `https://www.googleapis.com/youtube/v3/videos?id=${video.id.videoId}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`
+            )
+            .then((response) => {
+                setCat_data(response.data);
+                console.log(response.data);
+            })
+            .catch(() => {
+                console.log("通信に失敗しました");
+            });
     }, []);
 
     return (

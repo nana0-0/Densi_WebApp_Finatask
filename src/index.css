@@ -30,6 +30,21 @@ p{
   text-align: center;
   margin: 0 auto;
   border: none;
+  background: #F15A24;
+  font-size: 18px;
+  font-family: 'Yu Gothic',sans-serif;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin-bottom: 60px;
+  margin-top: 10px;
+}
+
+.underline{
+  position: relative;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .thumbnails{
@@ -41,8 +56,39 @@ border-radius: 50%;
   width: 500px;
 }
 
+h3{
+  position: relative;
+  display: inline-block;
+}
+
+h3::after{
+  content: "";
+  width: 19px;
+  height: 3px;
+  background: #F15A24;
+  position: absolute;
+  top: 15px;
+  right: -25px;
+  transform: rotate(-45deg);
+}
+
+h3::before{
+  content: "";
+  width: 19px;
+  height: 3px;
+  background: #F15A24;
+  position: absolute;
+  top: 15px;
+  left:-25px;
+  transform: rotate(45deg);
+}
+
 .selectcenter{
   text-align: center;
+}
+
+.selectcenter p{
+  font-weight: bold;
 }
 
 em{
@@ -80,11 +126,4 @@ em{
 
 .viewcount em{
   font-size: 45px;
-}
-@media screen and (min-width:480px) {
-  /*　画面サイズが480pxからはここを読み込む　*/
-  .flex {
-    display: flex;
-    justify-content: space-evenly;
-  }
 }

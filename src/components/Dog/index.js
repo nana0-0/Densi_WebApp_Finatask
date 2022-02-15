@@ -131,26 +131,26 @@ export default class Dogtest extends React.Component {
         // const url = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${keyword}&maxResults=3&key=${YOUTUBE_API_KEY}`;
         // const id = this.state.videosCat[0].id.videoId;
         // const url = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`;
-        // axios
-        //   .get(`https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${'いぬ'}&maxResults=3&key=${YOUTUBE_API_KEY}`)
-        //   .then(response => {
-        //       this.setState({
-        //         videosCat: response.data.items,
-        //       });
-        //   })
-        //   .catch(() => {
-        //       console.log('通信に失敗しました');
-        //   });
-        // axios
-        //   .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.props.id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`)
-        //   .then(response => {
-        //       this.setState({
-        //         videosCat_data: response.data.items,
-        //       });
-        //   })
-        //   .catch(() => {
-        //       console.log('通信に失敗しました');
-        //   });
+        axios
+          .get(`https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${'いぬ'}&maxResults=3&key=${YOUTUBE_API_KEY}`)
+          .then(response => {
+              this.setState({
+                videosCat: response.data.items,
+              });
+          })
+          .catch(() => {
+              console.log('通信に失敗しました');
+          });
+        axios
+          .get(`https://www.googleapis.com/youtube/v3/videos?id=${this.props.id}&key=${YOUTUBE_API_KEY}&part=snippet,contentDetails,statistics,status`)
+          .then(response => {
+              this.setState({
+                videosCat_data: response.data.items,
+              });
+          })
+          .catch(() => {
+              console.log('通信に失敗しました');
+          });
     };
 
     render() {

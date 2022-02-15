@@ -11,7 +11,7 @@ const Youtube = (props) => {
         const channel = video.snippet.channelTitle;
         return (
             <div key={url}>
-                <p>{channel}</p>
+                <p className="underline">{channel}</p>
                 <div
                     style={{
                         margin: "0 auto",
